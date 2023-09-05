@@ -1,20 +1,25 @@
 <script>
 import { def } from "@vue/shared";
-import Card from "./components/Card.vue";
 import Home from "./components/Home.vue";
+import Card from "./components/Card.vue";
 
 export default {
   name: "App",
   components: {
-    Card,
-    Home
+    Home,
+    Card
+  },
+  data() {
+    return {
+      showHome: true
+    };
   }
 };
 </script>
 
 <template>
   <div>
-    <Home />
-    <Card />
+    <Home v-if="showHome" />
+    <Card v-else />
   </div>
 </template>
