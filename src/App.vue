@@ -19,7 +19,7 @@ export default {
 
 <template>
   <div>
-    <Home v-if="showHome" />
-    <Card v-else />
+    <Home v-if="showHome" @show-card="showHome = false" />
+    <Card v-else @show-home="showHome = true" />
   </div>
 </template>

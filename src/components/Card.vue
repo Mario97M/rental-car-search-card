@@ -89,6 +89,9 @@ export default {
       <a href="#"
         ><div class="search-button"><button>Search</button></div></a
       >
+      <div class="go-home-button">
+        <button @click="$emit('show-home')">Back to Home</button>
+      </div>
     </div>
   </body>
 </template>
@@ -132,7 +135,7 @@ body {
 
 .card {
   width: 28em;
-  height: 33em;
+  height: 38em;
   background-color: white;
   z-index: 99;
   position: relative;
@@ -145,6 +148,7 @@ body {
   font-family: "Merriweather", serif;
   padding: 2em;
   border-radius: 2em;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card span {
@@ -223,5 +227,22 @@ input {
   left: 5px;
   position: relative;
   top: 4px;
+}
+
+.go-home-button {
+  text-align: center;
+  margin: 2em auto;
+}
+
+.go-home-button button {
+  background-color: #fe6f4f;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 3em;
+  width: 50%;
+  display: inline-block;
 }
 </style>
